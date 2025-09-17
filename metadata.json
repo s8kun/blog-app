@@ -1,0 +1,5 @@
+{
+  "name": "Gemini BlogCraft",
+  "description": "A modern, AI-powered blog platform where users can create, read, and interact with articles. Features include user authentication, article management (CRUD), comments, likes, and an AI assistant to help generate post content.",
+  "requestFramePermissions": []
+}
