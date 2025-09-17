@@ -21,7 +21,6 @@ const ProfilePage: React.FC<ProfilePageProps> = ({
   return (
     <div className="space-y-8">
       <Card className="p-4 sm:p-8 flex flex-col items-center sm:flex-row sm:items-start sm:space-x-8">
-        // amazonq-ignore-next-line
         <img
           src={user.avatarUrl}
           alt={user.username}

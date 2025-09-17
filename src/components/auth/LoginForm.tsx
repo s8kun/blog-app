@@ -15,7 +15,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLogin, onNavigate }) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // amazonq-ignore-next-line
+
     if (identifier.trim() && password.trim()) {
       onLogin(identifier, password);
     }

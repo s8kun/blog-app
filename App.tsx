@@ -39,8 +39,8 @@ const AppContent: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    // reset to first page when search changes
-    setSearchParams({ page: "1" });
+    // reset to first page when search changes — remove the page param so root URL is used for page 1
+    setSearchParams({});
   }, [searchQuery]);
 
   const handleLogin = (identifier: string, password: string) => {
@@ -207,9 +207,13 @@ const AppContent: React.FC = () => {
               <HomePage
                 posts={filteredPosts}
                 currentPage={currentPage}
-                setCurrentPage={(page: number) =>
-                  setSearchParams({ page: String(page) })
-                }
+                setCurrentPage={(page: number) => {
+                  if (page <= 1) {
+                    setSearchParams({});
+                  } else {
+                    setSearchParams({ page: String(page) });
+                  }
+                }}
                 onSelectPost={handleSelectPost}
                 onSelectUser={handleSelectUser}
               />

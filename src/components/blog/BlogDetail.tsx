@@ -96,7 +96,7 @@ const BlogDetail: React.FC<BlogDetailProps> = ({
               currentUser ? "Like this post" : "Login to like this post"
             }
           >
-            <Heart className="w-6 h-6" />
+            <Heart fill={hasLiked ? "red" : "none"} className="w-6 h-6" />
             <span className="text-lg font-bold">{post.likes}</span>
           </Button>
 

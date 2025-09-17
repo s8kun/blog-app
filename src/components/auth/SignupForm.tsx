@@ -25,8 +25,7 @@ const SignupForm: React.FC<SignupFormProps> = ({ onSignup, onNavigate }) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // amazonq-ignore-next-line
-    // amazonq-ignore-next-line
+
     if (Object.values(formData).every((field) => field.trim())) {
       onSignup(formData);
     }
